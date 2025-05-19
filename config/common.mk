@@ -74,7 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Google apps
 ifeq ($(WITH_GMS), true)
-$(call inherit-product, vendor/gapps/$(TARGET_ARCH)/$(TARGET_ARCH)-vendor.mk)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 endif
 ifeq ($(WITH_MICROG), true)
 $(call inherit-product, vendor/microg/products/gms.mk)
