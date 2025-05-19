@@ -52,8 +52,8 @@ PRODUCT_PACKAGES += \
 # Customization
 PRODUCT_PACKAGES += \
     LeafBackgrounds \
-    DefaultThemesStub
-#    ThemePickerLeaf
+    DefaultThemesStub \
+    ThemePicker
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -74,7 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Google apps
 ifeq ($(WITH_GMS), true)
-$(call inherit-product, vendor/gapps/gms.mk)
+$(call inherit-product, vendor/gapps/$(TARGET_ARCH)/$(TARGET_ARCH)-vendor.mk)
 endif
 ifeq ($(WITH_MICROG), true)
 $(call inherit-product, vendor/microg/products/gms.mk)
